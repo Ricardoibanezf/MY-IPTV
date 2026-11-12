@@ -6,7 +6,15 @@
       "patterns": [
         "^ESPN(?:\\b|[0-9+])"
       ],
-      "group": "Deportes - ESPN"
+      "group": "Deportes - ESPN",
+      "exclude_countries": [
+        "nl",
+        "br"
+      ],
+      "exclude_patterns": [
+        "\\b(?:Netherlands|Nederland|Brazil|Brasil)\\b",
+        "\\b(?:NL|BR)\\b"
+      ]
     },
     {
       "label": "América TV (Perú)",
