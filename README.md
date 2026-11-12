@@ -14,11 +14,11 @@ Esta versión busca **únicamente** los canales solicitados dentro del archivo p
 
 ## Activación (GitHub Pages sin servidor propio)
 
-1. Crea un repositorio **público** `mi-iptv` en GitHub, con la rama `main`.
-2. Sube *el contenido* de esta carpeta con su estructura, incluido `.github/workflows/update.yml`. El ZIP está pensado para descargarse/descomprimirse; GitHub no ejecuta un ZIP subido como un solo archivo.
+1. El repositorio ya está creado: `Ricardoibanezf/MY-IPTV`, rama `main`.
+2. Los archivos ya están en la raíz: `config.json`, `scripts/build.py` y `.github/workflows/update.yml`.
 3. En **Settings → Pages → Build and deployment → Source** selecciona **GitHub Actions**.
 4. En **Actions → Actualizar mi IPTV → Run workflow** inicia la primera publicación.
-5. Cuando termine, abre `https://TU-USUARIO.github.io/mi-iptv/playlist.m3u` para agregar el enlace a TiviMate o Televizo. Puedes revisar coincidencias en `https://TU-USUARIO.github.io/mi-iptv/status.json`.
+5. Cuando termine, abre `https://ricardoibanezf.github.io/MY-IPTV/playlist.m3u` para agregar el enlace a TiviMate o Televizo. Puedes revisar coincidencias en `https://ricardoibanezf.github.io/MY-IPTV/status.json`.
 
 El archivo se regenera cada día mediante GitHub Actions (el cron puede demorarse ocasionalmente). Configura tu reproductor para refrescar la playlist regularmente. Puedes editar `config.json` para cambiar las selecciones.
 
