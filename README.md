@@ -5,7 +5,7 @@ Esta versión busca **únicamente** los canales solicitados dentro del archivo p
 ## Canales solicitados
 
 - **ESPN Sports:** todas las variantes cuyo nombre empiece con `ESPN` que estén publicadas en el M3U de IPTV-org. No se garantiza ESPN premium ni que sean accesibles.
-- **ESPN Latinoamérica/México:** se incluyen cuando aparezcan. Ya están contemplados en la búsqueda de todos los ESPN; no se duplican.
+- **ESPN Latinoamérica/México:** están contemplados dentro de la búsqueda general de ESPN; no hay una regla adicional ni se duplican.
 - **América TV (Perú):** nombres América TV / América Televisión, identificador de canal `.pe`.
 - **ATV (Perú):** ATV / Andina de Televisión, identificador `.pe`.
 - **CBS Boston (EE. UU.):** CBS News Boston, CBS Boston y WBZ-TV si aparecen.
