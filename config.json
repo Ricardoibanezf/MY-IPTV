@@ -1,0 +1,10 @@
+{
+  "source_url": "https://iptv-org.github.io/iptv/index.m3u",
+  "favorites": [
+    {"label": "ESPN (todas las variantes disponibles)", "patterns": ["^ESPN(?:\\b|[0-9+])"], "group": "Deportes - ESPN"},
+    {"label": "ESPN Latinoamérica / México", "patterns": ["^ESPN.*(?:México|Mexico|Latin America|Latinoamérica|Latinoamerica)", "^ESPN(?:\\s*[0-9]+)?\\s*(?:MX|LATAM)\\b"], "group": "Deportes - ESPN"},
+    {"label": "América TV (Perú)", "patterns": ["^Am[eé]rica\\s*(?:TV|Televisi[oó]n)(?:\\b|$)"], "countries": ["pe"], "group": "Perú"},
+    {"label": "ATV (Perú)", "patterns": ["^ATV(?:\\b|\\s|$)", "^Andina de Televisi[oó]n\\b"], "countries": ["pe"], "group": "Perú"},
+    {"label": "CBS Boston", "patterns": ["CBS\\s*(?:News\\s*)?Boston", "^WBZ(?:-TV)?(?:\\b|\\s)"], "group": "Estados Unidos - Boston"}
+  ]
+}
