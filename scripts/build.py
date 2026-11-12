@@ -47,6 +47,16 @@ def matches(entry, rule):
         id_country = re.search(r"\.([a-z]{2})(?:@|$)", entry["tvg_id"], re.I)
         if not id_country or id_country.group(1).lower() not in countries:
             return False
+    # Remove countries explicitly excluded by the playlist owner.
+    # IPTV-org generally identifies channels as Name.br or Name.nl in tvg-id.
+    excluded_countries = set(rule.get("exclude_countries", []))
+    id_country = re.search(r"\\.([a-z]{2})(?:@|$)", entry["tvg_id"], re.I)
+    if id_country and id_country.group(1).lower() in excluded_countries:
+        return False
+    # Also catch regional labels such as ESPN Brasil or ESPN NL.
+    if any(re.search(p, entry["name"], re.IGNORECASE)
+           for p in rule.get("exclude_patterns", [])):
+        return False
     return True
 
 
