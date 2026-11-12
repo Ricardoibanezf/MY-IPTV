@@ -6,7 +6,7 @@ Playlist M3U personalizada, creada a partir de la lista pública de [IPTV-org](h
 
 | Grupo | Canales que busca |
 | --- | --- |
-| **Deportes - ESPN** | Todas las variantes disponibles cuyo nombre comienza con ESPN, incluidas las de México y Latinoamérica. **Una sola regla, sin duplicarlas por país.** |
+| **Deportes - ESPN** | Todas las variantes disponibles cuyo nombre comienza con ESPN, incluidas las de México y Latinoamérica, **excepto las de Países Bajos (Netherlands/NL) y Brasil (Brazil/BR)**. Una sola regla, sin duplicados. |
 | **Perú** | América TV / América Televisión y ATV / Andina de Televisión (con identificador de Perú). |
 | **Estados Unidos - Boston** | CBS Boston, CBS News Boston o WBZ-TV, si aparecen en IPTV-org. |
 
@@ -33,7 +33,7 @@ La playlist pública solo cambia cuando se publica una nueva versión y el repro
 
 ## Cambiar canales
 
-Edita el archivo [config.json](./config.json). Cada elemento dentro de `favorites` contiene un nombre descriptivo (`label`), patrones de coincidencia (`patterns`) y un grupo (`group`); las reglas de Perú incluyen el filtro `countries`.
+Edita el archivo [config.json](./config.json). Cada elemento dentro de `favorites` contiene un nombre descriptivo (`label`), patrones de coincidencia (`patterns`) y un grupo (`group`); las reglas de Perú incluyen el filtro `countries`. Para ESPN, `exclude_countries` omite los identificadores `.nl` y `.br`, y `exclude_patterns` filtra también nombres regionales explícitos.
 
 Guarda el cambio en la rama `main` y GitHub Actions intentará generar de nuevo la playlist. El generador evita duplicar una misma entrada aunque coincida con varias reglas.
 
